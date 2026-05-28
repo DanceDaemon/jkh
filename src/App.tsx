@@ -1,9 +1,9 @@
-import { MetersTable } from './components/meters-table/MetersTable';
+import { MetersPage } from './components/meters-page/MetersPage';
 
 function App() {
   return (
     <>
-      <MetersTable />
+      <MetersPage />
     </>
   );
 }

@@ -1,6 +1,9 @@
 .scrollContainer {
   height: calc(100vh - 120px);
   overflow-y: auto;
+  border: 1px solid #e0e5eb;
+  border-radius: 12px;
+  scrollbar-width: thin;
 }
 
 .table {
@@ -12,8 +15,10 @@
   position: sticky;
   top: 0;
   background: #f0f3f7;
+  color: #697180;
   z-index: 1;
   font-weight: 500;
+  font-size: 13px;
   text-align: left;
   padding-left: 12px;
 }

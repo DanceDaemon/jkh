@@ -10,6 +10,7 @@
 .row td {
   padding-left: 12px;
   border-bottom: 1px solid #e0e5eb;
+  font-size: 14px;
 }
 
 .row td:first-of-type {
