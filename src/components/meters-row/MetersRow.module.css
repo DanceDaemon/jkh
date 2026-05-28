@@ -1,0 +1,50 @@
+.row {
+  height: 52px;
+}
+
+.row:hover {
+  background-color: #f7f8f9;
+  cursor: pointer;
+}
+
+.row td {
+  padding-left: 12px;
+  border-bottom: 1px solid #e0e5eb;
+}
+
+.row td:first-of-type {
+  padding: 0;
+  text-align: center;
+}
+
+.row td:last-of-type {
+  padding-right: 12px;
+  padding-left: 0;
+  text-align: right;
+}
+
+.buttonCell {
+  width: 64px;
+}
+
+.deleteButton {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fee3e3;
+  color: #c53030;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  background-color: #fbd5d5;
+}
+
+.row:hover .deleteButton {
+  opacity: 1;
+}
