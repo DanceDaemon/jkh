@@ -1,13 +1,19 @@
 import { API_BASE_URL } from '@/config';
 
-type QueryParams = Record<string, string | number | undefined>;
+type QueryParams = Record<string, string | number | undefined | string[]>;
 
 const buildUrl = (path: string, params?: QueryParams): string => {
   const url = new URL(`${API_BASE_URL}${path}`, window.location.origin);
 
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
-      if (value !== undefined) url.searchParams.set(key, String(value));
+      if (value === undefined) return;
+
+      if (Array.isArray(value)) {
+        value.forEach((v) => url.searchParams.append(key, String(v)));
+      } else {
+        url.searchParams.set(key, String(value));
+      }
     });
   }
 

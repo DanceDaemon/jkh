@@ -9,6 +9,6 @@ export async function fetchAreasByIds(
   }
 
   return apiClient.get<Paginated<AreaResult>>('/areas/', {
-    id__in: ids.join(','),
+    id__in: ids,
   });
 }
